@@ -1,17 +1,6 @@
 ---
 name: oakley-finance
-description: >
-  Australian finance assistant providing daily market briefings, AUD/USD forex monitoring,
-  financial news aggregation, ASX portfolio tracking, price/news/volatility alerts,
-  economic calendar, commodity prices, and market movers — all delivered via Telegram.
-  Covers forex, AUD/USD, ASX 200, S&P 500, gold, oil, iron ore, RBA, Fed, interest rates,
-  earnings, dividends, portfolio P&L, sector allocation, and economic events.
-metadata:
-  openclaw:
-    requires:
-      bins: [python3, pip3]
-      env: [TELEGRAM_CHAT_ID]
-    install: "pip3 install oakley-finance"
+description: "Australian finance CLI providing daily market briefings, AUD/USD forex monitoring, financial news aggregation, ASX portfolio tracking, price/news/volatility alerts, economic calendar, commodity prices, and market movers. Covers forex, ASX 200, S&P 500, gold, oil, RBA, Fed, interest rates, portfolio P&L, sector allocation, and economic events."
 ---
 
 # Oakley Finance Skill
