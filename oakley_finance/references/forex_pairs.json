@@ -1,0 +1,25 @@
+{
+  "primary": {
+    "AUDUSD=X": {"name": "AUD/USD", "base": "AUD", "quote": "USD", "description": "Australian Dollar / US Dollar"},
+    "AUDEUR=X": {"name": "AUD/EUR", "base": "AUD", "quote": "EUR", "description": "Australian Dollar / Euro"},
+    "AUDGBP=X": {"name": "AUD/GBP", "base": "AUD", "quote": "GBP", "description": "Australian Dollar / British Pound"},
+    "AUDJPY=X": {"name": "AUD/JPY", "base": "AUD", "quote": "JPY", "description": "Australian Dollar / Japanese Yen"},
+    "AUDNZD=X": {"name": "AUD/NZD", "base": "AUD", "quote": "NZD", "description": "Australian Dollar / New Zealand Dollar"},
+    "AUDCAD=X": {"name": "AUD/CAD", "base": "AUD", "quote": "CAD", "description": "Australian Dollar / Canadian Dollar"},
+    "AUDCHF=X": {"name": "AUD/CHF", "base": "AUD", "quote": "CHF", "description": "Australian Dollar / Swiss Franc"}
+  },
+  "major_crosses": {
+    "EURUSD=X": {"name": "EUR/USD", "base": "EUR", "quote": "USD", "description": "Euro / US Dollar"},
+    "GBPUSD=X": {"name": "GBP/USD", "base": "GBP", "quote": "USD", "description": "British Pound / US Dollar"},
+    "USDJPY=X": {"name": "USD/JPY", "base": "USD", "quote": "JPY", "description": "US Dollar / Japanese Yen"},
+    "USDCHF=X": {"name": "USD/CHF", "base": "USD", "quote": "CHF", "description": "US Dollar / Swiss Franc"},
+    "NZDUSD=X": {"name": "NZD/USD", "base": "NZD", "quote": "USD", "description": "New Zealand Dollar / US Dollar"},
+    "USDCAD=X": {"name": "USD/CAD", "base": "USD", "quote": "CAD", "description": "US Dollar / Canadian Dollar"}
+  },
+  "dxy": {
+    "DX-Y.NYB": {"name": "US Dollar Index", "description": "DXY - Trade-weighted USD index"}
+  },
+  "default_pair": "AUDUSD=X",
+  "valid_periods": ["1d", "5d", "1mo", "3mo", "6mo", "1y", "2y"],
+  "default_period": "1mo"
+}

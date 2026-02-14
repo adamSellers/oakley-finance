@@ -1,0 +1,68 @@
+{
+  "feeds": {
+    "rba": {
+      "name": "Reserve Bank of Australia",
+      "url": "https://www.rba.gov.au/rss/rss-cb-media-releases.xml",
+      "category": "central_bank",
+      "priority": "high",
+      "country": "AU"
+    },
+    "reuters_business": {
+      "name": "Reuters Business",
+      "url": "https://news.google.com/rss/search?q=reuters+business+australia&hl=en-AU&gl=AU&ceid=AU:en",
+      "category": "business",
+      "priority": "high",
+      "country": "AU"
+    },
+    "google_finance_au": {
+      "name": "Google News - AU Finance",
+      "url": "https://news.google.com/rss/search?q=australian+finance+markets&hl=en-AU&gl=AU&ceid=AU:en",
+      "category": "markets",
+      "priority": "medium",
+      "country": "AU"
+    },
+    "google_forex": {
+      "name": "Google News - Forex",
+      "url": "https://news.google.com/rss/search?q=AUD+USD+forex&hl=en-AU&gl=AU&ceid=AU:en",
+      "category": "forex",
+      "priority": "high",
+      "country": "global"
+    },
+    "google_asx": {
+      "name": "Google News - ASX",
+      "url": "https://news.google.com/rss/search?q=ASX+stock+market&hl=en-AU&gl=AU&ceid=AU:en",
+      "category": "markets",
+      "priority": "medium",
+      "country": "AU"
+    },
+    "google_rba": {
+      "name": "Google News - RBA",
+      "url": "https://news.google.com/rss/search?q=reserve+bank+australia+interest+rate&hl=en-AU&gl=AU&ceid=AU:en",
+      "category": "central_bank",
+      "priority": "high",
+      "country": "AU"
+    },
+    "google_commodities": {
+      "name": "Google News - Commodities",
+      "url": "https://news.google.com/rss/search?q=iron+ore+gold+copper+commodity+price&hl=en-AU&gl=AU&ceid=AU:en",
+      "category": "commodities",
+      "priority": "medium",
+      "country": "global"
+    },
+    "google_fed": {
+      "name": "Google News - Federal Reserve",
+      "url": "https://news.google.com/rss/search?q=federal+reserve+interest+rate+decision&hl=en-US&gl=US&ceid=US:en",
+      "category": "central_bank",
+      "priority": "high",
+      "country": "US"
+    }
+  },
+  "keyword_weights": {
+    "high": ["RBA", "interest rate", "cash rate", "AUD/USD", "federal reserve", "inflation", "GDP", "employment", "recession", "crisis"],
+    "medium": ["ASX 200", "iron ore", "gold price", "copper", "earnings", "dividend", "trade war", "tariff", "bond yield"],
+    "low": ["analyst", "forecast", "outlook", "upgrade", "downgrade", "IPO", "merger", "acquisition"]
+  },
+  "max_items_per_feed": 10,
+  "max_total_items": 30,
+  "cache_ttl_minutes": 15
+}

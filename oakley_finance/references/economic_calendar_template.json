@@ -1,0 +1,214 @@
+{
+  "recurring_events": [
+    {
+      "name": "RBA Interest Rate Decision",
+      "country": "AU",
+      "frequency": "monthly",
+      "typical_day": "first Tuesday",
+      "impact": "high",
+      "affects": ["AUD/USD", "ASX 200", "AU bonds"],
+      "description": "Reserve Bank of Australia monetary policy decision"
+    },
+    {
+      "name": "RBA Meeting Minutes",
+      "country": "AU",
+      "frequency": "monthly",
+      "typical_day": "two weeks after decision",
+      "impact": "medium",
+      "affects": ["AUD/USD"],
+      "description": "Detailed minutes from most recent RBA board meeting"
+    },
+    {
+      "name": "AU Employment Change",
+      "country": "AU",
+      "frequency": "monthly",
+      "typical_day": "third Thursday",
+      "impact": "high",
+      "affects": ["AUD/USD", "ASX 200"],
+      "description": "Australian employment and unemployment rate data"
+    },
+    {
+      "name": "AU CPI (Quarterly)",
+      "country": "AU",
+      "frequency": "quarterly",
+      "typical_day": "late January, April, July, October",
+      "impact": "high",
+      "affects": ["AUD/USD", "AU bonds", "ASX 200"],
+      "description": "Australian Consumer Price Index - key inflation measure"
+    },
+    {
+      "name": "AU Monthly CPI Indicator",
+      "country": "AU",
+      "frequency": "monthly",
+      "typical_day": "last week",
+      "impact": "medium",
+      "affects": ["AUD/USD"],
+      "description": "Monthly CPI indicator for non-quarterly months"
+    },
+    {
+      "name": "AU GDP",
+      "country": "AU",
+      "frequency": "quarterly",
+      "typical_day": "early March, June, September, December",
+      "impact": "high",
+      "affects": ["AUD/USD", "ASX 200"],
+      "description": "Australian Gross Domestic Product growth"
+    },
+    {
+      "name": "AU Retail Sales",
+      "country": "AU",
+      "frequency": "monthly",
+      "typical_day": "last Friday",
+      "impact": "medium",
+      "affects": ["AUD/USD", "ASX consumer stocks"],
+      "description": "Australian retail turnover data"
+    },
+    {
+      "name": "AU Trade Balance",
+      "country": "AU",
+      "frequency": "monthly",
+      "typical_day": "first Thursday",
+      "impact": "medium",
+      "affects": ["AUD/USD"],
+      "description": "Australian imports and exports balance"
+    },
+    {
+      "name": "Fed Interest Rate Decision",
+      "country": "US",
+      "frequency": "8x per year",
+      "typical_day": "FOMC schedule",
+      "impact": "high",
+      "affects": ["AUD/USD", "DXY", "global equities"],
+      "description": "US Federal Reserve monetary policy decision"
+    },
+    {
+      "name": "US Non-Farm Payrolls",
+      "country": "US",
+      "frequency": "monthly",
+      "typical_day": "first Friday",
+      "impact": "high",
+      "affects": ["AUD/USD", "DXY", "US equities"],
+      "description": "US employment situation report"
+    },
+    {
+      "name": "US CPI",
+      "country": "US",
+      "frequency": "monthly",
+      "typical_day": "mid-month",
+      "impact": "high",
+      "affects": ["AUD/USD", "DXY", "US bonds"],
+      "description": "US Consumer Price Index inflation data"
+    },
+    {
+      "name": "US GDP",
+      "country": "US",
+      "frequency": "quarterly",
+      "typical_day": "late month after quarter end",
+      "impact": "high",
+      "affects": ["DXY", "global equities"],
+      "description": "US Gross Domestic Product growth (advance, preliminary, final)"
+    },
+    {
+      "name": "US Retail Sales",
+      "country": "US",
+      "frequency": "monthly",
+      "typical_day": "mid-month",
+      "impact": "medium",
+      "affects": ["DXY", "US equities"],
+      "description": "US retail and food services sales"
+    },
+    {
+      "name": "ECB Interest Rate Decision",
+      "country": "EU",
+      "frequency": "6-8x per year",
+      "typical_day": "ECB schedule",
+      "impact": "medium",
+      "affects": ["EUR/USD", "AUD/EUR"],
+      "description": "European Central Bank monetary policy decision"
+    },
+    {
+      "name": "China GDP",
+      "country": "CN",
+      "frequency": "quarterly",
+      "typical_day": "mid-month after quarter end",
+      "impact": "high",
+      "affects": ["AUD/USD", "iron ore", "ASX materials"],
+      "description": "Chinese GDP growth - key driver of Australian commodity demand"
+    },
+    {
+      "name": "China PMI",
+      "country": "CN",
+      "frequency": "monthly",
+      "typical_day": "last day of month / first day",
+      "impact": "medium",
+      "affects": ["AUD/USD", "iron ore", "copper"],
+      "description": "Chinese Purchasing Managers Index - manufacturing and services"
+    }
+  ],
+  "upcoming_events": [
+    {
+      "date": "2026-02-18",
+      "name": "RBA Meeting Minutes",
+      "country": "AU",
+      "impact": "medium",
+      "time_aedt": "11:30"
+    },
+    {
+      "date": "2026-02-19",
+      "name": "AU Wage Price Index",
+      "country": "AU",
+      "impact": "medium",
+      "time_aedt": "11:30"
+    },
+    {
+      "date": "2026-02-20",
+      "name": "AU Employment Change",
+      "country": "AU",
+      "impact": "high",
+      "time_aedt": "11:30"
+    },
+    {
+      "date": "2026-02-26",
+      "name": "AU Monthly CPI Indicator",
+      "country": "AU",
+      "impact": "medium",
+      "time_aedt": "11:30"
+    },
+    {
+      "date": "2026-03-04",
+      "name": "RBA Interest Rate Decision",
+      "country": "AU",
+      "impact": "high",
+      "time_aedt": "14:30"
+    },
+    {
+      "date": "2026-03-05",
+      "name": "AU GDP Q4 2025",
+      "country": "AU",
+      "impact": "high",
+      "time_aedt": "11:30"
+    },
+    {
+      "date": "2026-03-07",
+      "name": "US Non-Farm Payrolls",
+      "country": "US",
+      "impact": "high",
+      "time_aedt": "00:30"
+    },
+    {
+      "date": "2026-03-12",
+      "name": "US CPI",
+      "country": "US",
+      "impact": "high",
+      "time_aedt": "00:30"
+    },
+    {
+      "date": "2026-03-19",
+      "name": "Fed Interest Rate Decision",
+      "country": "US",
+      "impact": "high",
+      "time_aedt": "06:00"
+    }
+  ],
+  "_note": "upcoming_events should be manually updated periodically with confirmed dates and times"
+}
