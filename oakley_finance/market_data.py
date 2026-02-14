@@ -19,7 +19,7 @@ def _load_reference(filename: str) -> dict:
     return json.loads(path.read_text())
 
 
-def _fetch_ticker(symbol: str, period: str = "5d") -> Optional[dict]:
+def _fetch_ticker(symbol: str, period: str = "5d", timeout: int = 10) -> Optional[dict]:
     """Fetch ticker data with caching and rate limiting."""
     cache_key = f"{symbol}_{period}"
     cached = _cache.get(cache_key, ttl=Config.cache_ttl["market_data"])
@@ -29,7 +29,7 @@ def _fetch_ticker(symbol: str, period: str = "5d") -> Optional[dict]:
     _limiter.acquire()
     try:
         ticker = yf.Ticker(symbol)
-        hist = ticker.history(period=period)
+        hist = ticker.history(period=period, timeout=timeout)
         if hist.empty:
             return None
 

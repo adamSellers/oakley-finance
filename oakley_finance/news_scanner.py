@@ -34,9 +34,12 @@ def _score_item(title: str, summary: str, keywords: dict) -> int:
     return score
 
 
-def _parse_feed(url: str, max_items: int = 10) -> list[dict]:
-    """Parse a single RSS feed."""
+def _parse_feed(url: str, max_items: int = 10, timeout: int = 10) -> list[dict]:
+    """Parse a single RSS feed with a socket timeout."""
+    import socket
+    old_timeout = socket.getdefaulttimeout()
     try:
+        socket.setdefaulttimeout(timeout)
         feed = feedparser.parse(url)
         items = []
         for entry in feed.entries[:max_items]:
@@ -53,6 +56,8 @@ def _parse_feed(url: str, max_items: int = 10) -> list[dict]:
         return items
     except Exception:
         return []
+    finally:
+        socket.setdefaulttimeout(old_timeout)
 
 
 def scan_news(category: Optional[str] = None, limit: int = 15) -> list:

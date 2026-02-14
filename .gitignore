@@ -4,3 +4,4 @@ __pycache__/
 .env
 
 SKILLS_GUIDE.md
+DEPLOYMENT_GUIDE.md

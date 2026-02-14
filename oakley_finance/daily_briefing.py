@@ -1,6 +1,7 @@
 """Morning briefing orchestrator — assembles all sections into a formatted brief."""
 
 import sys
+import concurrent.futures
 
 from oakley_finance.common.formatting import (
     format_section_header,
@@ -8,6 +9,8 @@ from oakley_finance.common.formatting import (
     truncate_for_telegram,
     now_aedt,
 )
+
+SECTION_TIMEOUT = 20  # seconds per section
 
 
 def _build_forex_section() -> str:
@@ -127,6 +130,22 @@ def _build_alerts_section() -> str:
         return f"[Alerts unavailable: {e}]"
 
 
+def _run_section(name: str, func) -> str:
+    """Run a section builder with a timeout and progress logging."""
+    print(f"  Fetching {name}...", file=sys.stderr, flush=True)
+    try:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+            future = executor.submit(func)
+            result = future.result(timeout=SECTION_TIMEOUT)
+        return result or ""
+    except concurrent.futures.TimeoutError:
+        print(f"  {name} timed out ({SECTION_TIMEOUT}s), skipping.", file=sys.stderr, flush=True)
+        return f"[{name} timed out]"
+    except Exception as e:
+        print(f"  {name} failed: {e}", file=sys.stderr, flush=True)
+        return f"[{name} unavailable: {e}]"
+
+
 def build_briefing() -> str:
     """Build the full morning briefing."""
     now = now_aedt()
@@ -134,18 +153,25 @@ def build_briefing() -> str:
 
     header = f"Morning Finance Brief — {date_str}"
 
-    sections = [
-        _build_alerts_section(),
-        _build_forex_section(),
-        _build_indices_section(),
-        _build_commodities_section(),
-        _build_news_section(),
-        _build_calendar_section(),
-        _build_portfolio_section(),
+    print("Building morning brief...", file=sys.stderr, flush=True)
+
+    section_builders = [
+        ("Alerts", _build_alerts_section),
+        ("Forex", _build_forex_section),
+        ("Indices", _build_indices_section),
+        ("Commodities", _build_commodities_section),
+        ("News", _build_news_section),
+        ("Calendar", _build_calendar_section),
+        ("Portfolio", _build_portfolio_section),
     ]
 
-    # Filter empty sections
-    sections = [s for s in sections if s.strip()]
+    sections = []
+    for name, func in section_builders:
+        result = _run_section(name, func)
+        if result.strip():
+            sections.append(result)
+
+    print("Brief complete.", file=sys.stderr, flush=True)
 
     body = f"{header}\n{'=' * len(header)}\n\n" + "\n\n".join(sections)
     return truncate_for_telegram(body)
